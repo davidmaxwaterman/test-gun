@@ -1,6 +1,6 @@
 import Gun from "gun";
 
-const gun = Gun(["http://20.26.200.209:1024/gun"]);
+const gun = Gun([import.meta.env.VITE_GUN_RELAY_URL]);
 const testing = gun.get("testing");
 
 testing.map().on((data, key) => {
